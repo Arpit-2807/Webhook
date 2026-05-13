@@ -23,7 +23,10 @@ public class WebhookPayload{
     public String getEvent() { return event; }
     public void setEvent(String event) { this.event = event; }
 
-    public Double Amount() { return amount; }
+    public String getPaymentId() { return paymentId; }
+    public void setPaymentId(String paymentId) { this.paymentId = paymentId; }
+
+    public Double getAmount() { return amount; }
     public void setAmount(Double amount) { this.amount = amount; }
 
     public String getCurrency() { return currency; }
