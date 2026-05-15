@@ -41,10 +41,10 @@ public class WebhookService {
     public long getTotalCount() { return paymentEventRepository.count();}
 
     //Get success count
-    public long getSuccessCount() { return paymentEventRepository.findByStatus("success").size();}
+    public long getSuccessCount() {  return (long) paymentEventRepository.findByStatus("success").size();}
 
     //Get failed count
-    public long getFailedCount(){ return paymentEventRepository.findByStatus("failed").size();}
+    public long getFailedCount(){ return (long) paymentEventRepository.findByStatus("failed").size();}
 }
 
 

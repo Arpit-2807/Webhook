@@ -15,22 +15,32 @@ public class DashboardController {
     @GetMapping("/")
     public String dashboard(Model model) {
 
-        //send data to the HTML page
-        model.addAttribute("events", webhookService.getAllEvents());
-        model.addAttribute("totalCount", webhookService.getTotalCount());
-        model.addAttribute("SuccessCount", webhookService.getSuccessCount());
-        model.addAttribute("failedCount", webhookService.getFailedCount());
+        model.addAttribute("events",
+                webhookService.getAllEvents());
+        model.addAttribute("totalCount",
+                webhookService.getTotalCount());
+        model.addAttribute("successCount",
+                webhookService.getSuccessCount());
+        model.addAttribute("failedCount",
+                webhookService.getFailedCount());
 
-        //Return the dashboard HTML page
+        // Debug lines - check IntelliJ console
+        System.out.println("=== DASHBOARD DEBUG ===");
+        System.out.println("TOTAL COUNT: " + webhookService.getTotalCount());
+        System.out.println("SUCCESS COUNT: " + webhookService.getSuccessCount());
+        System.out.println("FAILED COUNT: " + webhookService.getFailedCount());
+        System.out.println("ALL EVENTS: " + webhookService.getAllEvents());
+        System.out.println("=======================");
+
         return "dashboard";
     }
 
     @GetMapping("/logs")
-    public String webhookLog(Model model) {
+    public String webhookLogs(Model model) {
 
-        model.addAttribute("events", webhookService.getAllEvents());
+        model.addAttribute("events",
+                webhookService.getAllEvents());
 
         return "webhook-log";
     }
-    }
-
+}
