@@ -23,15 +23,6 @@ public class DashboardController {
                 webhookService.getSuccessCount());
         model.addAttribute("failedCount",
                 webhookService.getFailedCount());
-
-        // Debug lines - check IntelliJ console
-        System.out.println("=== DASHBOARD DEBUG ===");
-        System.out.println("TOTAL COUNT: " + webhookService.getTotalCount());
-        System.out.println("SUCCESS COUNT: " + webhookService.getSuccessCount());
-        System.out.println("FAILED COUNT: " + webhookService.getFailedCount());
-        System.out.println("ALL EVENTS: " + webhookService.getAllEvents());
-        System.out.println("=======================");
-
         return "dashboard";
     }
 
