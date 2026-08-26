@@ -231,8 +231,7 @@ webhook/
 ## Author
 **Arpit Carpenter**
 - GitHub: https://github.com/Arpit-2807
-- LinkedIn: https://www.linkedin.com/in/arpit-vishwakarma-106b89277/
-
+- LinkedIn: https://www.linkedin.com/in/arpit-carpenter-106b89277/
 ## License
 
 This project is open source and available under the MIT License.
