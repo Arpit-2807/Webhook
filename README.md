@@ -234,4 +234,4 @@ webhook/
 - LinkedIn: https://www.linkedin.com/in/arpit-carpenter-106b89277/
 ## License
 
-This project is open source and available under the MIT License.
+This project is open source.
